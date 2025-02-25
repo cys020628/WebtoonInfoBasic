@@ -23,6 +23,7 @@
 ---
 
 ## 📌 주요 기능
+✅ **Jetpack Compose 기반 UI 설계 (Modern UI)** 
 ✅ **네이버 & 카카오 웹툰 목록 제공** (무한 스크롤 Paging3 적용)  
 ✅ **웹툰 클릭 시 웹뷰(WebView)로 상세 정보 이동**  
 ✅ **클린 아키텍처 (Single Module) 적용**  
