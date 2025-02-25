@@ -32,3 +32,33 @@
 
 ## 🏛 아키텍처
 본 프로젝트는 **클린 아키텍처** 원칙을 따르며, 단일 모듈 구조(Single Module)로 개발되었습니다.  
+
+## 🚀 코드 실행
+✅ BuildConfig(Module) -> 하단 코드 추가
+
+``` kotlin
+val properties = Properties().apply {
+    load(project.rootProject.file("local.properties").inputStream())
+}
+
+android {
+    defaultConfig {
+        buildConfigField(
+            "String",
+            "WEBTOON_BASE_URL",
+            "\"${properties.getProperty("WEBTOON_BASE_URL")}\""
+        )
+    }
+}
+
+  buildFeatures {
+        buildConfig = true
+    }
+
+```
+
+✅ local.properties -> 하단 코드 추가
+
+``` kotlin
+WEBTOON_BASE_URL = https://korea-webtoon-api-cc7dda2f0d77.herokuapp.com
+```
